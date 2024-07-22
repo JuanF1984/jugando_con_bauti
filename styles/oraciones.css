@@ -1,0 +1,140 @@
+.sujetosContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fila-sujetos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    min-height: 120px;
+}
+
+.sujeto {
+    width: 7em;
+    height: 7em;
+    margin: 0.3em;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.sujeto:hover:not(:disabled) {
+    transform: scale(1.1);
+}
+
+.sujeto:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#oracionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pictogramas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pictograma {
+    width: 7em;
+    height: 7em;
+    margin: 0.3em;
+}
+
+#textoOracion {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.dot {
+    width: 1em;
+    height: 1em;
+    background-color: #88319a;
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+.visorElementos {
+    height: 10em;
+    margin-top: 3em;
+    margin-bottom: 8em;
+}
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
+
+    .hero__container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .sujeto {
+        width: 4.5em;
+        height: 4.5em;
+    }
+
+    .sujetosContainer {
+        margin: .3em;
+    }
+
+    .pictograma {
+        width: 9em;
+        height: 9em;
+    }
+
+    .fila-sujetos {
+        margin: 0;
+        min-height: 0;
+    }
+}

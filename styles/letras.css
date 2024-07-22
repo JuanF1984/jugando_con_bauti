@@ -1,0 +1,59 @@
+main{
+    padding:4em;
+}
+
+/* seccion general  */
+.letras__main {
+    display: flex;
+    align-items: center;
+    padding: 1.25em;
+}
+
+/* contenedor de los botones en letras */
+.buttonContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;
+    margin: 2em 2.5em;
+    padding: 2%;
+    border-radius: 5px;
+    height: 70%;
+}
+
+.buttonContainer button{
+    font-size: 1.5em;
+}
+
+
+@media (max-width: 1200px){
+   body{
+    font-size: 14px;
+   }
+}
+
+@media (max-width: 992px){
+    body{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        font-size: 10px;
+    }
+
+    #letra{
+        display:none;
+    }
+
+    .letras__main{
+        flex-direction: column;
+    }
+    .container{
+        order:-1;
+    }
+}

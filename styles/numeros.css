@@ -1,0 +1,64 @@
+.numeros__main {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer {
+    width: 70%;
+    display: flex;
+}
+
+#imagenContenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.5em;
+}
+
+#imagenContenedor img {
+    flex: 1;
+    max-height: 10em;
+    margin: auto;
+    object-fit: contain;
+    margin: 0;
+    /* padding: 2.2em; */
+}
+
+.imagenSeccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #027333;
+    padding: 0;
+}
+
+.imagenSeccion p {
+    font-size: 2em;
+    padding: 0;
+}
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        font-size: 12px;
+    }
+
+    .buttonContainer {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
+}
