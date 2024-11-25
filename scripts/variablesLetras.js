@@ -6,10 +6,10 @@ export const imagenes = {
       "title": "Pictograma de un Avión"
     },
     b: {
-      "src": "/assets/img/letra/barco.png",
-      "name": "Barco",
-      "alt":"Barco de la página de  ARASAAC",
-      "title": "Pictograma de un Barco"
+      "src": "/assets/img/letra/bauti.png",
+      "name": "Bauti",
+      "alt":"foto con bauti",
+      "title": "Bauti"
     },
     c: {
       "src": "/assets/img/letra/casa.png",
