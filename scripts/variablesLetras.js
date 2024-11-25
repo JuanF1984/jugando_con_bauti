@@ -6,7 +6,7 @@ export const imagenes = {
       "title": "Pictograma de un Avión"
     },
     b: {
-      "src": "/assets/img/letra/bauti.jpg",
+      "src": "/assets/img/letra/bauti.jpeg",
       "name": "Bauti",
       "alt":"foto con bauti",
       "title": "Bauti"
