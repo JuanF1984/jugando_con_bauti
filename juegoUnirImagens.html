@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Memoria Figuras</title>
-    <link rel="stylesheet" href="styles/memoriaFiguras.css">
+    <title>Juego de Asociación</title>
     <link rel="stylesheet" href="styles/header_style.css">
     <link rel="stylesheet" href="styles/main_style.css">
+    <link rel="stylesheet" href="styles/unirImagenes.css">
 </head>
+
 <body>
     <header>
         <div class="header__superior">
@@ -18,7 +20,7 @@
                 <input type="search" name="search__header" id="search__header" placeholder="¿Qué deseas buscar?">
             </div>
         </div>
-    
+
         <div class="menu__container">
             <div class="menu">
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -35,10 +37,9 @@
                                 <li><a href="letras.html">Letras</a></li>
                                 <li><a href="numeros.html">Números</a></li>
                                 <li><a href="oraciones.html">Oraciones</a></li>
-                                <li><a href="juegoMemoriaFiguras.html" id="active">Memoria Figuras</a></li>
+                                <li><a href="juegoMemoriaFiguras.html">Memoria Figuras</a></li>
                                 <li><a href="juegoMemoriaLetras.html">Memoria Letras</a></li>
-                                <li><a href="juegoUnirImagens.html">Asociación</a></li>
-
+                                <li><a href="juegoUnirImagens.html" id="active">Asociación</a></li>
                             </ul>
                         </li>
                         <li><a href="nosotros.html">Nosotros</a></li>
@@ -47,28 +48,31 @@
                 </nav>
             </div>
         </div>
-        </header>
-        <main>
-            <div id="game-container">
-                <div id="cards-container"></div>
-                <div id="message"></div>
-                <button id="restart-button" style="display: none;">Jugar de nuevo</button>
-            </div>
-        </main>
-        <footer>
-            <div class="marca_footer">
-                <p>
-                    2024 - San Andrés de Giles - Buenos Aires - Argentina
-                </p>
-            </div>
-            <div class="redes">
-                <ul>
-                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-github"></i></a></li>
-                </ul>
-            </div>
-        </footer>
-    <script src="scripts/scriptMemoriaFiguras.js"></script>
+    </header>
+    <h1>Juego de Asociación</h1>
+    <div id="game-container">
+        <div id="img-container"></div>
+        <div id="name-container"></div>
+    </div>
+
+    <footer>
+        <div class="marca_footer">
+            <p>
+                2024 - San Andrés de Giles - Buenos Aires - Argentina
+            </p>
+        </div>
+        <div class="redes">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/variablesLetras.js"></script>
+    <script type="module" src="scripts/scriptUnirImagenes.js"></script>
+
 </body>
+
 </html>
