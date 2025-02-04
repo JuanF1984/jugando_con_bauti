@@ -131,14 +131,34 @@ h1 {
 
 @media (max-width: 480px) {
 
+    #game-container {
+        gap: 50px;
+    }
+
     #img-container,
     #name-container {
         grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #name-container {
+        gap: 1px;
     }
 
     .image-box,
     .name-box {
         width: 80px;
         height: 80px;
+    }
+
+    .congrats-message {
+        width: 100%;
+        text-align: center;
+    }
+
+    .restart-btn {
+        width: 100%;
+        align-self: flex-start;
     }
 }
