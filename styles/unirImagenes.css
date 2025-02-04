@@ -65,7 +65,7 @@ h1 {
 .image-box:hover,
 .name-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .image-box.correct {
@@ -107,7 +107,22 @@ h1 {
     font-weight: bold;
 }
 
+.image-box.selected,
+.name-box.selected {
+    border: 2px solid #012340;
+    background-color: #e0e8f7;
+}
+
+.image-box.correct,
+.name-box.correct {
+    border: 2px solid #04D939;
+    background-color: #e6f3e6;
+    pointer-events: none;
+    /* Evitar más interacciones con elementos ya emparejados */
+}
+
 @media (max-width: 768px) {
+
     #img-container,
     #name-container {
         grid-template-columns: repeat(2, 1fr);
@@ -115,6 +130,7 @@ h1 {
 }
 
 @media (max-width: 480px) {
+
     #img-container,
     #name-container {
         grid-template-columns: 1fr;

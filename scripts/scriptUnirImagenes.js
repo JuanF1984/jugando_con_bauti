@@ -29,57 +29,63 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Mostrar nombres desordenados
-        let names = [...selectedImages.map(img => img.name)].sort(() => 0.5 - Math.random());
+        let names = [...selectedImages.map(img => img.name)].sort(() => 0.6 - Math.random());
 
         names.forEach(name => {
             let nameDiv = document.createElement("div");
             nameDiv.classList.add("name-box");
             nameDiv.textContent = name;
-            nameDiv.draggable = true;
             nameDiv.dataset.name = name;
-
-            nameDiv.addEventListener("dragstart", (e) => {
-                e.dataTransfer.setData("text", e.target.dataset.name);
-            });
 
             nameContainer.appendChild(nameDiv);
         });
 
-        // Habilitar arrastrar y soltar
-        document.querySelectorAll(".image-box").forEach(imgBox => {
-            imgBox.addEventListener("dragover", (e) => e.preventDefault());
+        // Añadir eventos de selección
+        document.querySelectorAll(".image-box, .name-box").forEach(element => {
+            element.addEventListener("click", () => {
+                // Si ya está correcto, no hacer nada
+                if (element.classList.contains("correct")) return;
 
-            imgBox.addEventListener("drop", (e) => {
-                e.preventDefault();
-                let draggedName = e.dataTransfer.getData("text");
-                let draggedElement = document.querySelector(`.name-box[data-name='${draggedName}']`);
+                // Deseleccionar otros elementos del mismo tipo
+                const elementType = element.classList.contains('image-box') ? '.image-box' : '.name-box';
+                document.querySelectorAll(elementType).forEach(el => {
+                    if (el !== element) el.classList.remove("selected");
+                });
 
-                if (draggedName === imgBox.dataset.name) {
-                    // Si aún no tiene nombre correcto
-                    if (!imgBox.classList.contains("correct")) {
-                        imgBox.classList.add("correct");
+                // Alternar selección del elemento actual
+                element.classList.toggle("selected");
 
-                        // Ocultar imagen
-                        let img = imgBox.querySelector('img');
+                // Verificar si hay una selección coincidente
+                const selectedImage = document.querySelector(".image-box.selected");
+                const selectedName = document.querySelector(".name-box.selected");
+
+                if (selectedImage && selectedName) {
+                    // Verificar si coinciden
+                    if (selectedImage.dataset.name === selectedName.dataset.name) {
+                        selectedImage.classList.add("correct");
+                        selectedName.classList.add("correct");
+                        selectedImage.classList.remove("selected");
+                        selectedName.classList.remove("selected");
+
+                        // Ocultar imagen original
+                        let img = selectedImage.querySelector('img');
                         img.style.display = 'none';
 
                         // Crear un span con el nombre para mostrarlo dentro de la imagen
                         let nameTag = document.createElement("span");
-                        nameTag.textContent = draggedName;
+                        nameTag.textContent = selectedName.dataset.name;
                         nameTag.classList.add("matched-name");
 
-                        imgBox.appendChild(nameTag);
-
-                        // Eliminar la palabra arrastrada de la lista de nombres
-                        if (draggedElement) {
-                            draggedElement.remove();
-                        }
-
+                        selectedImage.appendChild(nameTag);
+                        
                         // Verificar si se completó el juego
                         checkGameCompletion();
+                    } else {
+                        // Si no coinciden, deseleccionar
+                        selectedImage.classList.remove("selected");
+                        selectedName.classList.remove("selected");
+                        alert("¡Incorrecto! Inténtalo de nuevo.");
                     }
-                } else {
-                    alert("¡Incorrecto! Inténtalo de nuevo.");
                 }
             });
         });
