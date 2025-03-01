@@ -1,3 +1,4 @@
+// Prueba para comprobar carga de imagen de mamá
 import { imagenes } from "./variablesLetras.js"
 const botones = document.querySelectorAll("button");
 let imagen = document.getElementById("imagen");
