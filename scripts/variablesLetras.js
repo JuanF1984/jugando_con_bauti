@@ -55,6 +55,7 @@ export const imagenes = {
       "src": "/assets/img/letra/luna.jpg",
       "name": "Luna"
     },
+    // probando la imagen que no se carga en producción
     m: {
       "src": "/assets/img/letra/mama.jpg",
       "name": "Mamá"
