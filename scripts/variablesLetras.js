@@ -57,7 +57,7 @@ export const imagenes = {
     },
     // probando la imagen que no se carga en producción
     m: {
-      "src": "/assets/img/letra/mama.jpg",
+      "src": "/assets/img/letra/mama.webp",
       "name": "Mamá"
     },
     n: {
