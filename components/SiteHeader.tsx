@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import NavGameMenu from "@/components/NavGameMenu";
 
 const navLinks = [
   { href: "/", label: "Inicio" },
-  { href: "/juegos", label: "Juegos" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/contacto", label: "Contacto" },
 ];
@@ -55,6 +55,9 @@ export default function SiteHeader() {
                 </li>
               );
             })}
+            <li>
+              <NavGameMenu />
+            </li>
           </ul>
         </nav>
       </div>
