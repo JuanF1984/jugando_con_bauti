@@ -32,7 +32,7 @@ export default async function CategoriaPage({ params }: Props) {
         className="border-b border-[var(--line)]"
         style={{ backgroundColor: cat.bg }}
       >
-        <div className="max-w-5xl mx-auto px-8 py-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
           <nav className="text-[13px] text-[var(--ink-soft)] mb-4">
             <Link href="/" className="hover:text-[var(--ink)] transition-colors">
               Inicio
@@ -49,8 +49,8 @@ export default async function CategoriaPage({ params }: Props) {
         </div>
       </div>
 
-      <main className="flex-1 max-w-5xl mx-auto w-full px-8 py-10">
-        <div className="grid grid-cols-2 gap-4">
+      <main className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-8 py-8 sm:py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {cat.juegos.map((juego) => (
             <GameTile key={juego.id} juego={juego} bg={cat.bg} fg={cat.fg} />
           ))}

@@ -42,19 +42,22 @@ export default async function LetraPage({ params }: Props) {
       <GameHeader backHref="/juegos/letras/abecedario" juegoNombre="Abecedario" />
       <GameContextBar current={index + 1} total={letras.length} />
 
-      <main className="flex-1 flex flex-col items-center justify-center px-6 py-10 gap-8">
-        <div className="flex items-center gap-8">
-          <NavCircle
-            direction="prev"
-            href={prev ? `/juegos/letras/abecedario/${getSlug(prev)}` : undefined}
-          />
+      <main className="flex-1 flex flex-col items-center justify-center px-4 py-8 gap-6">
+        {/* Card + side arrows (desktop) / card only (mobile) */}
+        <div className="flex items-center gap-4 sm:gap-8">
+          <div className="hidden sm:block">
+            <NavCircle
+              direction="prev"
+              href={prev ? `/juegos/letras/abecedario/${getSlug(prev)}` : undefined}
+            />
+          </div>
 
           <div
-            className="rounded-2xl px-10 py-8 flex flex-col items-center gap-4 w-[300px]"
+            className="rounded-2xl px-6 sm:px-10 py-6 sm:py-8 flex flex-col items-center gap-4 w-[260px] sm:w-[300px]"
             style={{ backgroundColor: "var(--letras-bg)" }}
           >
             <div
-              className="font-serif text-[130px] font-semibold leading-none select-none"
+              className="font-serif text-[100px] sm:text-[130px] font-semibold leading-none select-none"
               style={{ color: "var(--letras-fg)" }}
             >
               {item.letra}
@@ -64,14 +67,28 @@ export default async function LetraPage({ params }: Props) {
             <img
               src={imagen}
               alt={palabra}
-              className="w-40 h-40 object-contain"
+              className="w-32 h-32 sm:w-40 sm:h-40 object-contain"
             />
 
-            <div className="font-serif text-[40px] font-semibold text-[var(--ink)] leading-tight">
+            <div className="font-serif text-[32px] sm:text-[40px] font-semibold text-[var(--ink)] leading-tight">
               {palabra.toUpperCase()}
             </div>
           </div>
 
+          <div className="hidden sm:block">
+            <NavCircle
+              direction="next"
+              href={next ? `/juegos/letras/abecedario/${getSlug(next)}` : undefined}
+            />
+          </div>
+        </div>
+
+        {/* Mobile prev/next */}
+        <div className="flex gap-4 sm:hidden">
+          <NavCircle
+            direction="prev"
+            href={prev ? `/juegos/letras/abecedario/${getSlug(prev)}` : undefined}
+          />
           <NavCircle
             direction="next"
             href={next ? `/juegos/letras/abecedario/${getSlug(next)}` : undefined}

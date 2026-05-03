@@ -11,13 +11,13 @@ export default function Nosotros() {
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
-      <main className="flex-1 max-w-5xl mx-auto w-full px-8 py-12">
-        <h1 className="font-serif text-[32px] font-semibold text-[var(--ink)] mb-10">
+      <main className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-8 py-10 sm:py-12">
+        <h1 className="font-serif text-[32px] font-semibold text-[var(--ink)] mb-8 sm:mb-10">
           Nosotros
         </h1>
 
-        <div className="flex gap-10 items-start">
-          <div className="relative shrink-0 w-[260px] h-[300px] rounded-2xl overflow-hidden border border-[var(--line)]">
+        <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 items-start">
+          <div className="relative shrink-0 w-full sm:w-[260px] h-[240px] sm:h-[300px] rounded-2xl overflow-hidden border border-[var(--line)]">
             <Image
               src="/img/Bauty%20r.jpeg"
               alt="Bauti y papá"
@@ -26,7 +26,7 @@ export default function Nosotros() {
             />
           </div>
 
-          <div className="flex flex-col gap-5 pt-1">
+          <div className="flex flex-col gap-5 pt-0 sm:pt-1">
             <p className="text-[16px] text-[var(--ink)] leading-relaxed">
               Bauty (en el momento en que le estamos dando vida a este proyecto)
               tiene 3 años, estamos transitando un caminito para que se afiance

@@ -10,7 +10,7 @@ export default function Contacto() {
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
-      <main className="flex-1 max-w-5xl mx-auto w-full px-8 py-12">
+      <main className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-8 py-10 sm:py-12">
         <h1 className="font-serif text-[32px] font-semibold text-[var(--ink)] mb-2">
           Contacto
         </h1>

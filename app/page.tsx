@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
-      <main className="flex-1 max-w-5xl mx-auto w-full px-8 py-12 flex flex-col gap-12">
+      <main className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-8 py-10 sm:py-12 flex flex-col gap-10 sm:gap-12">
         <section>
           <h1 className="font-serif text-[32px] font-semibold text-[var(--ink)] mb-3">
             Jugar para aprender
@@ -19,7 +19,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {categories.map((cat) => (
               <CategoryCard key={cat.id} category={cat} />
             ))}

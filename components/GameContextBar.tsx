@@ -11,7 +11,7 @@ export default function GameContextBar({
 }: Props) {
   return (
     <div className="border-b border-[var(--line)] bg-[var(--bg)]">
-      <div className="max-w-5xl mx-auto px-8 h-10 flex items-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-8 h-10 flex items-center">
         <span className="text-[14px] text-[var(--ink-soft)]">
           {label}{" "}
           <strong className="text-[var(--ink)] font-bold">{current}</strong> de{" "}

@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function SiteFooter() {
   return (
     <footer className="border-t border-[var(--line)] mt-auto">
-      <div className="max-w-5xl mx-auto px-8 h-12 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-4 sm:px-8 h-12 flex items-center justify-between">
         <span className="text-[12px] text-[var(--ink-soft)]">
           San Andrés de Giles · {new Date().getFullYear()}
         </span>

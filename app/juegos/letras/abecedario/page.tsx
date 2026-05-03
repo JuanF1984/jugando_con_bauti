@@ -24,8 +24,8 @@ export default async function AbecedarioGrid() {
       ) : (
         <>
           <ProfileBanner profile={profile} />
-          <main className="flex-1 max-w-5xl mx-auto w-full px-8 py-10">
-            <div className="mb-8">
+          <main className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-8 py-8 sm:py-10">
+            <div className="mb-6 sm:mb-8">
               <h1 className="font-serif text-[24px] font-semibold text-[var(--ink)] mb-1">
                 Elegí una letra
               </h1>
@@ -34,7 +34,7 @@ export default async function AbecedarioGrid() {
               </p>
             </div>
 
-            <div className="grid grid-cols-6 gap-3">
+            <div className="grid grid-cols-5 sm:grid-cols-6 gap-2 sm:gap-3">
               {letras.map((item) => (
                 <Link
                   key={item.letra}
