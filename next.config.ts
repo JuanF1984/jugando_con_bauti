@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
       { source: "/juegoUnirImagens.html",    destination: "/juegos/letras/asociacion", permanent: true },
       { source: "/nosotros.html",            destination: "/nosotros",                 permanent: true },
       { source: "/contacto.html",            destination: "/contacto",                 permanent: true },
+      { source: "/juegos.html",              destination: "/juegos",                   permanent: true },
+      { source: "/index.html",               destination: "/",                         permanent: true },
     ];
   },
 };
