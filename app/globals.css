@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Base */
+  --bg: #fdfcf8;
+  --ink: #2d2a26;
+  --ink-soft: #6b6660;
+  --line: rgba(45, 42, 38, 0.10);
+  --line-strong: rgba(45, 42, 38, 0.25);
+
+  /* Acento del sitio */
+  --accent: #5a7a5e;
+  --accent-dark: #3d5640;
+  --accent-soft: #eef2ea;
+  --accent-border: #c8d4c2;
+
+  /* Letras y palabras */
+  --letras-bg: #f4ede0;
+  --letras-fg: #8a6b3a;
+
+  /* Números */
+  --numeros-bg: #e8eef0;
+  --numeros-fg: #4a6f7a;
+
+  /* Memoria */
+  --memoria-bg: #ebefe5;
+  --memoria-fg: #3d5640;
+
+  /* Oraciones */
+  --oraciones-bg: #f0e8e3;
+  --oraciones-fg: #a3654a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
